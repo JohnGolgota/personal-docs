@@ -1,0 +1,31 @@
+services:
+  web_php:
+    env_file:
+      - .env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web_php
+    restart: always
+    ports:
+      - $PORT:80
+    volumes:
+      - ./www:/var/www/html
+
+  base_de_datos:
+    image: mariadb:10.11.6-jammy
+    restart: always
+    container_name: base_de_datos
+    env_file:
+      - .env
+    environment:
+      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: "yes"
+      MARIADB_DATABASE: $DB_DATABASE
+      MARIADB_USER: $DB_USERNAME
+      MARIADB_PASSWORD: $DB_PASSWORD
+      LANG: en_US.UTF-8
+    ports:
+      - $DB_PORT:3306
+    volumes:
+      - ./full_db:/var/lib/mysql
+
