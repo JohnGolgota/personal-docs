@@ -8,4 +8,8 @@ RUN a2enmod rewrite
 
 RUN a2enmod headers
 
+RUN apt-get update && apt-get install -y unzip git
+
+COPY --from=composer /usr/bin/composer /usr/local/bin/composer
+
 RUN install-php-extensions pdo_mysql mysqli mbstring gd xdebug
