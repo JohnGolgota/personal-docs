@@ -42,3 +42,9 @@ jobs
 code ~/.bash_history 
 job
 jobs
+rq
+pip3 install --user -r requirements.txt
+rq worker &
+rq worker --url redis://:@cache:6379/9
+rq worker --url redis://:@cache:6379 &
+uvicorn main:app --reload &
