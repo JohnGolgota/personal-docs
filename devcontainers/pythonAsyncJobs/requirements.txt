@@ -3,3 +3,6 @@ redis
 pydantic
 uvicorn
 rq
+"fastapi[standard]"
+FastAPI
+'uvicorn[standard]'
