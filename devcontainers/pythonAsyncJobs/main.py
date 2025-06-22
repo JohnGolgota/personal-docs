@@ -2,7 +2,6 @@ from typing import Union
 from fastapi import FastAPI
 import redis
 import time
-import threading
 from pydantic import BaseModel
 import uvicorn
 from rq import Queue
