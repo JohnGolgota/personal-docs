@@ -2,3 +2,4 @@ fastapi
 redis
 pydantic
 uvicorn
+rq
