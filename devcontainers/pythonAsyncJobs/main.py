@@ -7,7 +7,7 @@ import uvicorn
 from rq import Queue
 
 app = FastAPI()
-r = redis.Redis(host='localhost', port=6379, db=0)
+r = redis.Redis(host='cache', port=6379, db=0)
 queue = Queue(connection=r)
 
 class Event(BaseModel):
