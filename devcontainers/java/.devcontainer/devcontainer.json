@@ -1,6 +1,8 @@
 {
 	"name": "Java & Typescript",
 	"image": "ghcr.io/prulloac/base:bookworm",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
 
 	// 👇 Features to add to the Dev Container. More info: https://containers.dev/implementors/features.
 	"features": {
@@ -11,9 +13,7 @@
 			"version": "latest",
 			"installMaven": true,
 			"installGradle": true
-		},
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers-extra/features/pnpm:2": {}
+		}
 	}
 
 	// 👇 Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -23,5 +23,5 @@
 	// "customizations": {},
 
 	// 👇 Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	,"remoteUser": "root"
 }
