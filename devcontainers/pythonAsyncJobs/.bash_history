@@ -48,3 +48,9 @@ rq worker &
 rq worker --url redis://:@cache:6379/9
 rq worker --url redis://:@cache:6379 &
 uvicorn main:app --reload &
+
+curl -X 'POST'   'http://localhost:8000/events/'   -H 'accept: application/json'   -d '{"a":"a"}'
+rq worker --url redis://:@cache:6379 &
+pip3 install --user -r requirements.txt
+rq worker --url redis://:@cache:6379 &
+uvicorn main:app --reload &

@@ -1,7 +1,6 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 import redis
-import time
 from pydantic import BaseModel
 import uvicorn
 from rq import Queue
@@ -20,29 +19,23 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 class Event(BaseModel):
     event: str
 
 def process_event(event: str):
-    # Cambiar de directorio
-    directorio = "/workspace/.devcontainer"  # Cambia esto a tu directorio deseado
-    os.chdir(directorio)
+    dir = "/workspace/.devcontainer"
+    os.chdir(dir)
 
-    # Ejecutar el comando 'ls' (en Linux/Mac) o 'dir' (en Windows)
-    comando = "ls"  # Cambia a "dir" si estás en Windows
+    command = "ls" 
 
-    # Ejecutar el comando
-    resultado = subprocess.run(comando, shell=True, capture_output=True, text=True)
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
 
-    # Imprimir la salida
-    print("Salida del comando:")
-    print(resultado.stdout)
+    print("command output:")
+    print(result.stdout)
 
-    # Imprimir errores, si los hay
-    if resultado.stderr:
-        print("Errores:")
-        print(resultado.stderr)
+    if result.stderr:
+        print("Errors:")
+        print(result.stderr)
 
 
 @app.post("/events/")
@@ -57,7 +50,6 @@ async def create_event(event: Request):
             return ({"job_id": job.id, "status": "queued"}), 200
     except Exception as e:
         print(f"Error parsing JSON: {e}")
-    finally:
         return {"status": "error", "message": "Invalid event but 200"}, 200
 
 if __name__ == "__main__":
