@@ -49,7 +49,7 @@ async def create_event(event: Request):
             job = queue.enqueue(process_event, "push")
             return ({"job_id": job.id, "status": "queued"}), 200
     except Exception as e:
-        print(f"Error parsing JSON: {e}")
+        print(f"something went wrong: {e}")
         return {"status": "error", "message": "Invalid event but 200"}, 200
 
 if __name__ == "__main__":
