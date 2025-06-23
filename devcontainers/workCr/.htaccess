@@ -31,13 +31,5 @@ RewriteRule ^(.*)$ protected_files.php?route=$1 [QSA]
     Deny from all
 </Files>
 
-ErrorDocument 403 /CRINMO/403.html
-ErrorDocument 404 /CRINMO/404.html
-
-Redirect 301 /crinmo/cttos_section/cttos_inmueble_index.php /crinmo/contratos/frontend/
-Redirect 301 /crinmo/contratos/frontend/index.html /crinmo/contratos/frontend/
-Redirect 301 /crinmo/inventarios_section/inventario_index.php /crinmo/inventarios/frontend/
-Redirect 301 /crinmo/sagrilaft_section/index.php /crinmo/sagrilaft/frontend/
-
 SetEnv PHP_VERBOSE 1
 SetEnv DOS 1
