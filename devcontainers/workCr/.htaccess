@@ -1,0 +1,43 @@
+Options +FollowSymLinks
+Options -MultiViews
+Options All -Indexes
+RewriteEngine On
+
+Header set Access-Control-Allow-Methods "GET, POST, PUT , PATCH, DELETE, OPTIONS"
+Header set Access-Control-Allow-Headers "X-Requested-With, Content-Type"
+
+# remove php ext
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+#remove html ext
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
+#return validated url to protected_files
+RewriteCond %{REQUEST_URI} /(api/upload_files|inventarios/backend/fotosinv)(/.*\.(png|jpeg|jpg|pdf))$ [NC]
+RewriteRule ^(.*)$ protected_files.php?route=$1 [QSA]
+
+# Forbidden - Accceso denegado
+<Files .htaccess>
+    order allow,deny
+    deny from all
+</Files>
+
+<Files ~ "\.(env|json|config.js|md|gitignore|gitattributes|lock)$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+ErrorDocument 403 /CRINMO/403.html
+ErrorDocument 404 /CRINMO/404.html
+
+Redirect 301 /crinmo/cttos_section/cttos_inmueble_index.php /crinmo/contratos/frontend/
+Redirect 301 /crinmo/contratos/frontend/index.html /crinmo/contratos/frontend/
+Redirect 301 /crinmo/inventarios_section/inventario_index.php /crinmo/inventarios/frontend/
+Redirect 301 /crinmo/sagrilaft_section/index.php /crinmo/sagrilaft/frontend/
+
+SetEnv PHP_VERBOSE 1
+SetEnv DOS 1
