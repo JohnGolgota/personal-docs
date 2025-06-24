@@ -5,8 +5,7 @@ services:
     command: tunnel --no-autoupdate run --token ${TUNNEL_TOKEN}
     env_file:
       - .env
-    networks:
-      - cloudflared_net
+    network_mode: "host"
 
 networks:
   cloudflared_net:

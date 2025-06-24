@@ -1,0 +1,47 @@
+services:
+  owncloud:
+    image: owncloud/server:${OWNCLOUD_VERSION}
+    container_name: owncloud_server
+    restart: always
+    ports:
+      - ${HTTP_PORT}:8080
+    depends_on:
+      - mariadb
+      - redis
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD", "/usr/bin/healthcheck"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    volumes:
+      - ./files:/mnt/data
+
+  mariadb:
+    image: mariadb:10.11
+    container_name: owncloud_mariadb
+    restart: always
+    env_file:
+      - .env
+    command: ["--max-allowed-packet=128M", "--innodb-log-file-size=64M"]
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+  redis:
+    image: redis:alpine
+    container_name: owncloud_redis
+    restart: always
+    command: ["--databases", "1"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ./redis:/data
