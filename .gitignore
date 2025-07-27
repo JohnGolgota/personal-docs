@@ -40,3 +40,5 @@ luac.out
 *.hex
 
 .env
+devcontainers/chatwoot/redis/
+*local.backup
