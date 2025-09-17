@@ -7,6 +7,16 @@ services:
       - .env
     network_mode: "host"
 
+  cloudflare-ddns:
+    image: oznu/cloudflare-ddns
+    container_name: cloudflare-ddns
+    environment:
+      - API_KEY=${API_KEY}
+      - ZONE=rsgolgota.org
+      - SUBDOMAIN=home
+      - PROXIED=false
+    restart: unless-stopped
+
 networks:
   cloudflared_net:
     external: true

@@ -1,0 +1,31 @@
+le_se:
+  cargo:
+    - fd
+    - bob:
+      - v0.11.4:
+        - muchos paquetes
+    - zellij
+    - nu
+    - starship
+
+  nix_packages:
+    - chezmoi
+    - fnm:
+      - corepack:
+        - pnpm:
+      - v24.8.0
+    - yazi
+    - gitui
+    - helix
+    - bat
+
+no le se:
+  .deb_files:
+    - vscodium
+    - pwsh
+  
+  apt:
+   - docker... creo
+   - pinentry-curses
+   
+
