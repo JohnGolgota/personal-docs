@@ -65,3 +65,4 @@ no instaled
 - [ ] neovide
 - [ ] nushell
 - [ ] zellij
+- [ ] gitui

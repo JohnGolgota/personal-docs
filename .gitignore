@@ -42,3 +42,8 @@ luac.out
 .env
 devcontainers/chatwoot/redis/
 *local.backup
+
+*local*
+
+# fk mac
+.DS_Store
