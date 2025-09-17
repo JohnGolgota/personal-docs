@@ -17,6 +17,7 @@ le_se:
     - yazi
     - gitui
     - helix
+    - bat
 
 no le se:
   .deb_files:
@@ -25,5 +26,6 @@ no le se:
   
   apt:
    - docker... creo
+   - pinentry-curses
    
 
