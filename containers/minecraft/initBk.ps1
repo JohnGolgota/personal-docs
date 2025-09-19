@@ -6,7 +6,7 @@ $timeStamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
 $backupFolder = Join-Path $backupPath (get-date -Format "yyyy-MM-dd") $timeStamp
 $backupFile = Join-Path $backupFolder "backup_$timeStamp.zip"
 
-$logFile = Join-Path $backupFolder "initBk.log"
+$logFile = Join-Path $backupFolder "backup.log"
 
 try
 {
