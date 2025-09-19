@@ -16,6 +16,7 @@ services:
         fabric-api
         syncmatica
         lithium
+        servux
       WHITELIST: |
         yo
         tu
@@ -37,6 +38,7 @@ services:
         fabric-api
         syncmatica
         lithium
+        servux
       LEVEL_TYPE: "minecraft:flat"
       MODE: "creative"
       SERVER_NAME: "js sandbox"
