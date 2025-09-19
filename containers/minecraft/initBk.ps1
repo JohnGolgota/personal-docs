@@ -31,6 +31,17 @@ try
 
 	Write-Host "Backup complete: $backupFile ($backupSizeMB MB)"
 
+	$oldBackups = Get-ChildItem $backupPath -Recurse -Filter "*.zip" |
+		Where-Object {
+			$_.LastWriteTime -lt (Get-Date).AddDays(-5)
+		}
+
+	if ($oldBackups.Count -gt 0)
+	{
+		Write-Host "Delete $($oldBackups.Count) old backups..."
+		$oldBackups | Remove-Item -Force
+	}
+
 } catch
 {
 	Write-Host "Error: $($_.Exception.Message)" -ForegroundColor Red
@@ -39,4 +50,3 @@ try
 {
 	Stop-Transcript
 }
-
