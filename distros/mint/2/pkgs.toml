@@ -1,0 +1,56 @@
+[apt]
+packages = [
+    "qemu",
+    "virt-manager",
+    "qemu-kvm",
+    "libvirt-daemon",
+    "libvirt-daemon-system",
+    "libvirt-clients",
+]
+
+[cargo]
+packages = [
+    "atuin",
+    "bob",
+    "cargo",
+    "fd",
+    "gitui",
+    "nu",
+    "rg",
+    "starship",
+    "zellij",
+    "zoxide",
+]
+
+[nix]
+packages = [
+    "alacritty",
+    "atuin",
+    "bat",
+    "bruno",
+    "c++",
+    "chezmoi",
+    "codium",
+    "cpp",
+    "fd",
+    "fnm",
+    "fzf",
+    "g++",
+    "gcc",
+    "gh",
+    "git",
+    "gitui",
+    "home-manager",
+    "hx",
+    "manga-tui",
+    "neovide",
+    "nu",
+    "nvim",
+    "rg",
+    "rio",
+    "starship",
+    "wezterm",
+    "yazi",
+    "zellij",
+    "zoxide",
+]
