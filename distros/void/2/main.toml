@@ -1,0 +1,48 @@
+name = "void-2"
+
+Description = """
+Quiero esto como mi laboratorio y playground de linux, voy a usar maquinas virtuales para probar diferentes distribuciones de linux.
+"""
+
+images = "~/libvirt/images"
+isos = "~/libvirt/isos"
+virtualization_engine = "kvm"
+
+[distros.void_3]
+name = "void_3"
+DE = "xfce"
+status = "pending"
+image = "void3.img"
+iso = "void-live-x86_64-20250202-xfce.iso"
+
+[distros.void_4]
+name = "void_4"
+DE = "no"
+status = "pending"
+
+[distros.nixos_2]
+name = "nixos_2"
+DE = "no"
+status = "pending"
+
+[distros.arch_6]
+name = "arch_6"
+DE = "no"
+status = "pending"
+image = "arch6.img"
+iso = "archlinux-x86_64.iso"
+
+[distros.debian_1]
+name = "debian_1"
+DE = "no"
+status = "pending"
+
+[distros.ubuntu_1]
+name = "ubuntu_1"
+DE = "no"
+status = "pending"
+
+[distros.fedora_1]
+name = "fedora_1"
+DE = "no"
+status = "pending"

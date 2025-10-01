@@ -1,0 +1,106 @@
+pendings = [
+	"""
+brew install font-symbols-only-nerd-font
+brew install --cask font-symbols-only-nerd-font
+"""
+]
+
+[xbps]
+packages = [
+	"base-devel",
+	"bridge-utils",
+	"chezmoi",
+	"curl",
+	"fastfetch",
+	"git",
+	"gcc",
+	"gnupg",
+	"libvirt",
+	"openssh",
+	"openssl",
+	"polkit",
+	"qemu",
+	"starship",
+	"virt-manager",
+	"wget",
+]
+false_packages = [
+	"qemu-kvm", # me siento engañado por la ia
+]
+
+[repositories]
+personal = [
+	"Yo/dotfiles",
+	"Yo/a-cli",
+]
+
+[cargo]
+packages = [
+	"bob-nvim",
+	"fd-find",
+	"ripgrep",
+]
+rust = { install = "main page instructions" }
+
+[bob-nvim]
+package = [
+	"latest"
+]
+config = """
+export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
+""" # este me lo invente
+
+[brew]
+packages = [
+	"fzf",
+	"yazi",
+	"ffmpeg",
+	"sevenzip",
+	"jq",
+	"poppler",
+	"zoxide",
+	"resvg",
+	"imagemagick",
+]
+install = "sigue la documentacion"
+
+[pwsh]
+wiki = "busque en google, es la pagina de microsoft no hay pierde"
+url = "https://learn.microsoft.com/en-us/powershell/scripting/install/install-other-linux?view=powershell-7.5#installation-using-a-binary-archive-file"
+install = """
+# Download the powershell '.tar.gz' archive
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.5.3/powershell-7.5.3-linux-x64.tar.gz
+
+# Create the target folder where powershell will be placed
+sudo mkdir -p /opt/microsoft/powershell/7
+
+# Expand powershell to the target folder
+sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
+
+# Set execute permissions
+sudo chmod +x /opt/microsoft/powershell/7/pwsh
+
+# Create the symbolic link that points to pwsh
+sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
+"""
+
+[extra]
+desc = "no tengo idea de donde poner esto"
+
+[extra.services]
+enable = [
+	"sudo ln -s /etc/sv/libvirtd /var/service",
+	"sudo ln -s /etc/sv/virtlogd /var/service",
+	"sudo ln -s /etc/sv/virtlockd /var/service",
+	"sudo ln -s /etc/sv/dbus /var/service",
+	"sudo ln -s /etc/sv/polkitd /var/service",
+]
+
+[extra.usermod]
+command = [
+	"sudo usermod -a -G libvirt,kvm jiss"
+]
+
+[extra.openssh]
+enable = "sudo ln -s /etc/sv/sshd /var/service"
+start = "sudo sv up sshd"
