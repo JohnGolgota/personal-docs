@@ -1,0 +1,73 @@
+repositories = [
+	"dotfiles"
+]
+
+pending = [
+	"go",
+	"zellij",
+	"fzf",
+	"ripgrep",
+	"fd",
+	"yazi",
+	"bat",
+	"dua",
+	"base-devel",
+	"git",
+	"ttf-nerd-fonts-symbols-mono",
+	"wezterm",
+	"nu",
+]
+
+[pacman]
+packages = [
+	"chezmoi",
+	"git",
+	"openssh",
+]
+
+[openssh]
+enable = "sudo systemctl enable sshd"
+start = "sudo systemctl start sshd"
+status = "sudo systemctl status sshd"
+
+[chezmoi]
+secret = "chezmoi secret keyring set --service=github --user=JohnGolgota"
+
+[yay]
+install = """
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+"""
+
+[cargo]
+install = "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+packages = [
+	"bob-nvim",
+	"starship",
+]
+
+[bob-nvim]
+packages = [
+	"v0.11.4",
+]
+
+[pwsh]
+wiki = "busque en google, es la pagina de microsoft no hay pierde"
+url = "https://learn.microsoft.com/en-us/powershell/scripting/install/install-other-linux?view=powershell-7.5#installation-using-a-binary-archive-file"
+install = """
+# Download the powershell '.tar.gz' archive
+curl -L -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.5.3/powershell-7.5.3-linux-x64.tar.gz
+
+# Create the target folder where powershell will be placed
+sudo mkdir -p /opt/microsoft/powershell/7
+
+# Expand powershell to the target folder
+sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
+
+# Set execute permissions
+sudo chmod +x /opt/microsoft/powershell/7/pwsh
+
+# Create the symbolic link that points to pwsh
+sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
+"""
