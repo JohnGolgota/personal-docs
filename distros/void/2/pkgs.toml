@@ -10,6 +10,7 @@ packages = [
 	"base-devel",
 	"bridge-utils",
 	"chezmoi",
+	"cmake",
 	"curl",
 	"fastfetch",
 	"git",
@@ -18,6 +19,8 @@ packages = [
 	"libvirt",
 	"openssh",
 	"openssl",
+	"openssl-devel",
+	"pkg-config",
 	"polkit",
 	"qemu",
 	"starship",
@@ -39,6 +42,7 @@ packages = [
 	"bob-nvim",
 	"fd-find",
 	"ripgrep",
+	"dua-cli",
 ]
 rust = { install = "main page instructions" }
 

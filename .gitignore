@@ -47,3 +47,5 @@ devcontainers/chatwoot/redis/
 
 # fk mac
 .DS_Store
+
+node_modules

@@ -4,45 +4,112 @@ Description = """
 Quiero esto como mi laboratorio y playground de linux, voy a usar maquinas virtuales para probar diferentes distribuciones de linux.
 """
 
-images = "~/libvirt/images"
-isos = "~/libvirt/isos"
+images = "/home/jiss/libvirt/images"
+isos = "/home/jiss/libvirt/isos"
 virtualization_engine = "kvm"
 
-[distros.void_3]
+pendientes = """
+como monda se instala freebsd?
+"""
+
+[distros.nobara]
+name = "nobara_1"
+DE = false
+status = "pending"
+iso = "Nobara-42-Official-2025-09-25.iso"
+image = ""
+
+[distros.openSUSE]
+name = "opensuse_1"
+iso = "openSUSE-Tumbleweed-DVD-x86_64-Current.iso"
+
+[distros.cachy]
+name = "cachy"
+iso = "cachyos-desktop-linux-250828.iso"
+
+[distros.endeavour]
+name = "endeavour"
+iso = "EndeavourOS_Mercury-Neo-2025.03.19.iso"
+
+[distros.manjaro]
+name = "manjaro_2"
+iso = "manjaro-xfce-25.0.8-250902-linux612.iso"
+
+[distros.anduin]
+name = "anduin_1"
+iso = "AnduinOS-1.3.7-es_ES.iso"
+
+[distros.alpine]
+name = "alpine_1"
+iso = "alpine-virt-3.22.1-x86_64.iso"
+
+[distros.garuda]
+name = "garuda_1"
+iso = "garuda.iso"
+
+[distros.nixos]
+name = "nixos_2"
+DE = false
+status = "pending"
+iso = "latest-nixos-graphical-x86_64-linux.iso"
+image = ""
+
+[distros.arch]
+name = "arch_6"
+DE = false
+status = "pending"
+iso = "archlinux-x86_64.iso"
+image = "arch6.img"
+
+[distros.debian]
+name = "debian_1"
+DE = false
+status = "pending"
+iso = "debian-13.1.0-amd64-netinst.iso"
+image = ""
+
+[distros.ubuntu]
+name = "ubuntu_1"
+DE = false
+status = "pending"
+iso = "ubuntu-24.04.3-desktop-amd64.iso"
+image = ""
+
+[[distros.void]]
 name = "void_3"
 DE = "xfce"
 status = "pending"
-image = "void3.img"
+details = """
+no he podido instalar el sistema tengo un persistente error en la instalacion de grub
+"""
 iso = "void-live-x86_64-20250202-xfce.iso"
+image = "void3.img"
 
-[distros.void_4]
+[[distros.void]]
 name = "void_4"
-DE = "no"
+DE = false
 status = "pending"
+iso = "void-live-x86_64-20250202-base.iso"
+image = ""
 
-[distros.nixos_2]
-name = "nixos_2"
-DE = "no"
+[[distros.void]]
+name = "puppy_1"
+DE = false
 status = "pending"
+iso = "VoidPup64-22.02-251001.iso"
+image = ""
 
-[distros.arch_6]
-name = "arch_6"
-DE = "no"
-status = "pending"
-image = "arch6.img"
-iso = "archlinux-x86_64.iso"
-
-[distros.debian_1]
-name = "debian_1"
-DE = "no"
-status = "pending"
-
-[distros.ubuntu_1]
-name = "ubuntu_1"
-DE = "no"
-status = "pending"
-
-[distros.fedora_1]
+[[distros.fedora]]
 name = "fedora_1"
-DE = "no"
+DE = false
 status = "pending"
+iso = "Fedora-Sway-Live-x86_64-42-1.1.iso"
+image = "fedora1.img"
+
+[[distros.fedora]]
+name = "fedora_2"
+DE = false
+status = "pending"
+iso = ""
+image = ""
+
