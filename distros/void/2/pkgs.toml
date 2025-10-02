@@ -43,6 +43,8 @@ packages = [
 	"fd-find",
 	"ripgrep",
 	"dua-cli",
+	"nu",
+	"bat",
 ]
 rust = { install = "main page instructions" }
 
@@ -65,6 +67,7 @@ packages = [
 	"zoxide",
 	"resvg",
 	"imagemagick",
+	"font-symbols-only-nerd-font",
 ]
 install = "sigue la documentacion"
 

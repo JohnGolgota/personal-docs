@@ -4,8 +4,8 @@ Description = """
 Quiero esto como mi laboratorio y playground de linux, voy a usar maquinas virtuales para probar diferentes distribuciones de linux.
 """
 
-images = "/home/jiss/libvirt/images"
-isos = "/home/jiss/libvirt/isos"
+images = "~/libvirt/images"
+isos = "~/libvirt/isos"
 virtualization_engine = "kvm"
 
 pendientes = """
@@ -25,7 +25,12 @@ iso = "openSUSE-Tumbleweed-DVD-x86_64-Current.iso"
 
 [distros.cachy]
 name = "cachy"
+status = "fail"
 iso = "cachyos-desktop-linux-250828.iso"
+image = "cachy1.img"
+details = """
+me falta pc para este
+"""
 
 [distros.endeavour]
 name = "endeavour"
@@ -42,10 +47,12 @@ iso = "AnduinOS-1.3.7-es_ES.iso"
 [distros.alpine]
 name = "alpine_1"
 iso = "alpine-virt-3.22.1-x86_64.iso"
+image = "alpine1.img"
 
 [distros.garuda]
 name = "garuda_1"
 iso = "garuda.iso"
+image = "garuda1.img"
 
 [distros.nixos]
 name = "nixos_2"
@@ -56,10 +63,13 @@ image = ""
 
 [distros.arch]
 name = "arch_6"
-DE = false
-status = "pending"
+DE = "hyprland"
+status = "active"
 iso = "archlinux-x86_64.iso"
 image = "arch6.img"
+details = """
+no soy capaz de usar esto
+"""
 
 [distros.debian]
 name = "debian_1"
@@ -78,7 +88,7 @@ image = ""
 [[distros.void]]
 name = "void_3"
 DE = "xfce"
-status = "pending"
+status = "grub error"
 details = """
 no he podido instalar el sistema tengo un persistente error en la instalacion de grub
 """
