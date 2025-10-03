@@ -45,6 +45,8 @@ packages = [
 	"dua-cli",
 	"nu",
 	"bat",
+	"zellij",
+	"xcp"
 ]
 rust = { install = "main page instructions" }
 
@@ -68,6 +70,7 @@ packages = [
 	"resvg",
 	"imagemagick",
 	"font-symbols-only-nerd-font",
+	"fcp"
 ]
 install = "sigue la documentacion"
 

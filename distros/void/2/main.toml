@@ -61,16 +61,6 @@ status = "pending"
 iso = "latest-nixos-graphical-x86_64-linux.iso"
 image = ""
 
-[distros.arch]
-name = "arch_6"
-DE = "hyprland"
-status = "active"
-iso = "archlinux-x86_64.iso"
-image = "arch6.img"
-details = """
-no soy capaz de usar esto
-"""
-
 [distros.debian]
 name = "debian_1"
 DE = false
@@ -85,13 +75,27 @@ status = "pending"
 iso = "ubuntu-24.04.3-desktop-amd64.iso"
 image = ""
 
+[[distros.arch]]
+name = "arch_6"
+DE = "hyprland"
+status = "active"
+iso = "archlinux-x86_64.iso"
+image = "arch6.img"
+details = """
+no soy capaz de usar esto
+"""
+
+[[distros.arch]]
+name = "arch_7_server"
+DE = "No"
+status = "pending"
+iso = "archlinux-x86_64.iso"
+image = "arch7.img"
+
 [[distros.void]]
 name = "void_3"
 DE = "xfce"
-status = "grub error"
-details = """
-no he podido instalar el sistema tengo un persistente error en la instalacion de grub
-"""
+status = "melo"
 iso = "void-live-x86_64-20250202-xfce.iso"
 image = "void3.img"
 
@@ -107,7 +111,7 @@ name = "puppy_1"
 DE = false
 status = "pending"
 iso = "VoidPup64-22.02-251001.iso"
-image = ""
+image = "voidpup1.img"
 
 [[distros.fedora]]
 name = "fedora_1"
