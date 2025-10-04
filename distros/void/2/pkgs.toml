@@ -1,7 +1,5 @@
 pendings = [
-	"""
-brew install font-symbols-only-nerd-font
-brew install --cask font-symbols-only-nerd-font
+"""
 """
 ]
 
@@ -26,15 +24,18 @@ packages = [
 	"starship",
 	"virt-manager",
 	"wget",
+	"docker",
+	"docker-compose"
 ]
 false_packages = [
-	"qemu-kvm", # me siento engañado por la ia
+	"qemu-kvm" # me siento engañado por la ia
 ]
 
 [repositories]
 personal = [
 	"Yo/dotfiles",
 	"Yo/a-cli",
+	"Yo/personal-docs"
 ]
 
 [cargo]
@@ -104,11 +105,13 @@ enable = [
 	"sudo ln -s /etc/sv/virtlockd /var/service",
 	"sudo ln -s /etc/sv/dbus /var/service",
 	"sudo ln -s /etc/sv/polkitd /var/service",
+	"sudo ln -s /etc/sv/docker /var/service"
 ]
 
 [extra.usermod]
 command = [
-	"sudo usermod -a -G libvirt,kvm jiss"
+	"sudo usermod -a -G libvirt,kvm jiss",
+	"sudo usermod -a -G docker jiss"
 ]
 
 [extra.openssh]
