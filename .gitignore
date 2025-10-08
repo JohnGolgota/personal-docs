@@ -49,3 +49,5 @@ devcontainers/chatwoot/redis/
 .DS_Store
 
 node_modules
+
+docs

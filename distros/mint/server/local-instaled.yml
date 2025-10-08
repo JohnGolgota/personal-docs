@@ -23,9 +23,11 @@ no le se:
   .deb_files:
     - vscodium
     - pwsh
+    - docker
   
   apt:
    - docker... creo
    - pinentry-curses
+   - tmux
    
 
