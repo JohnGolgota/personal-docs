@@ -10,6 +10,9 @@ packages = [
 	"chezmoi",
 	"cmake",
 	"curl",
+	"docker",
+	"docker-compose",
+	"eza",
 	"fastfetch",
 	"git",
 	"gcc",
@@ -21,11 +24,12 @@ packages = [
 	"pkg-config",
 	"polkit",
 	"qemu",
+	"screen",
 	"starship",
+	"tmux",
 	"virt-manager",
 	"wget",
-	"docker",
-	"docker-compose"
+	"zsh"
 ]
 false_packages = [
 	"qemu-kvm" # me siento engañado por la ia
