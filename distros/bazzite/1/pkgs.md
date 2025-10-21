@@ -32,6 +32,9 @@ brew
 - [x] zoxide
 - [x] yazi
 - [x] chezmoi
+- [x] dua-cli
+- [x] bat
+- [x] gh
 
 rust
 
