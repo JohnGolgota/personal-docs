@@ -1,0 +1,64 @@
+pk.deb = ["vscodium", "wezterm", "steam", "vscode", "vscode-insiders"]
+flatpak = ["brave", "remmina", "podman desktop"]
+
+[apt]
+pk = ["openssl", "tmux", "zsh", "docker-compose", "podman", "git"]
+
+[pwsh]
+install = "alternative method -> wiki"
+
+[brew]
+install = "wiki de mierda"
+pk = [
+  "gcc",
+  "jq",
+  "fzf",
+  "ffmpeg",
+  "sevenzip",
+  "font-symbols-only-nerd-font",
+  "imagemagick",
+  "resvg",
+  "poppler",
+  "yazi",
+  "fastfetch",
+  "chezmoi"
+]
+
+[rust]
+install = "wiki"
+pk = [
+  "bob-nvim",
+  "fd-find",
+  "ripgrep",
+  "zoxide",
+  "starship",
+  "eza",
+  "dua-cli",
+  "nu",
+  "bat",
+  "zellij",
+  "xcp",
+  "fnm",
+  "gitui"
+]
+
+[rust.bob-nvim]
+pk = [
+  "latest"
+]
+plugins = "all"
+
+[rust.fnm]
+pk = ["latest"]
+corepack = "enable pnpm"
+
+[rust.bob-nvim]
+pk = ["latest"]
+
+[rust.bob-nvim.nvim]
+pk = ["lazy plugins"]
+
+[todo]
+pk = []
+commands = """
+"""
