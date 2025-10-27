@@ -1,0 +1,55 @@
+todo = [
+# sh
+"brew",
+# brew
+"sevenzip",
+]
+pacman = [
+"chezmoi",
+"yazi",
+"remmina",
+"tmux",
+"flatpak",
+"gitui",
+"podman",
+"docker-compose",
+]
+cachyos = [
+	"cloudflared",
+	"cloudflare-warp",
+"brave-bin",
+"gaming-pk",
+"resvg",
+"wezterm",
+]
+[repositories]
+personal = [
+"docs",
+"dotfiles"
+]
+[bins]
+pwsh = "wiki"
+tar = [
+"vscode",
+"vscodium",
+"jetbrains_toolbox",
+"lapce",
+]
+jetbrains_toolbox = [
+"fleet",
+"webstorm",
+"intellij",
+"android studio",
+"pycharm"
+]
+[rust]
+cargo = [
+"starship",
+"zoxide",
+"dua-cli",
+"zellij",
+"nu",
+"fnm",
+"bob-nvim",
+"xcp",
+]
