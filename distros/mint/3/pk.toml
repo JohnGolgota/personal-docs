@@ -52,10 +52,10 @@ plugins = "all"
 pk = ["latest"]
 corepack = "enable pnpm"
 
-[rust.bob-nvim]
+[rust.bob_nvim]
 pk = ["latest"]
 
-[rust.bob-nvim.nvim]
+[rust.bob_nvim.nvim]
 pk = ["lazy plugins"]
 
 [todo]

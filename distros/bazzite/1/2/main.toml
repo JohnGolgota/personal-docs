@@ -1,0 +1,64 @@
+flatpak = [
+    "barrier",
+    "dbeaver",
+    "discord",
+    "telegram",
+    "discord",
+    "brave",
+    "remmina",
+    "cartuchos",
+    "bruno",
+    "podman desktop",
+    "github desktop",
+    "wezterm",
+]
+todo = [
+    "vscodium",
+    "vscode",
+]
+
+[dot]
+rpm = []
+
+[rust]
+install = "wiki"
+cargo = [
+    "bob-nvim",
+    "fd-find",
+    "ripgrep",
+    "dua-cli",
+    "nu",
+    "bat",
+    "xcp",
+    "zoxide",
+    "starship",
+    "eza",
+    "fnm",
+]
+
+[pwsh]
+install = "wiki"
+
+[brew]
+install = "wiki"
+pk = [
+    "chezmoi",
+    "zellij",
+    "gitui",
+    "fzf",
+    "ffmpeg",
+    "jq",
+    "yazi",
+    "resvg",
+    "poppler",
+    "imagemagick",
+    "sevenzip",
+    "ttyd"
+]
+
+[respositories]
+personal = [
+    "dotfiles",
+    "a-cli",
+    "personal-docs",
+]

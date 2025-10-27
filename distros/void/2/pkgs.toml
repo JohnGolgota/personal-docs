@@ -29,6 +29,8 @@ packages = [
 	"tmux",
 	"virt-manager",
 	"wget",
+	"wpa_supplicant",
+	"wireless_tools",
 	"zsh"
 ]
 false_packages = [

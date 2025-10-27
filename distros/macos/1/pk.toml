@@ -1,0 +1,6 @@
+description = "esto es demaciado viejo... pero puedo ir documentanco cocitas"
+
+brew = [
+    "ttyd",
+    "croc",
+]
