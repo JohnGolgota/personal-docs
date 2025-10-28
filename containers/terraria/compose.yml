@@ -1,24 +1,23 @@
 services:
   tml:
     container_name: tml
-    #restart: unless-stopped
-    build:
-      context: .
-      args:
-        UID: 1000
-        GID: 1000
-        #TML_VERSION: v2023.8.3.3
-    #entrypoint: [ "/bin/bash" ] # Uncomment this line if you need to poke around in the container
+    image: jacobsmile/tmodloader1.4
     tty: true
     stdin_open: true
+    restart: unless-stopped
     ports:
       - 7785:7777
     volumes:
-      - ./tModLoader:/home/tml/.local/share/Terraria/tModLoader
+      - ./temp:/data:Z
     environment:
-      - AUTOCREATE=1
-      - WORLDNAME=tmlCalamity1.wld
-      - DIFFICULTY=2
-      # - WORLD=/home/tml/.local/share/Terraria/tModLoader/Worlds/tmlCalamity1.wld
-      - PASSWORD=passworld
-      - MOTD="Welcome to my tModLoader Server :)"
+      - TMOD_SHUTDOWN_MESSAGE=Goodbye!
+      - TMOD_AUTOSAVE_INTERVAL=15
+      - TMOD_AUTODOWNLOAD=2824688072,2824688266,2859639393,2995193002,2839001756,2826052599,2858296368,2828041071,2797518634,2828997816,2707400823,2563309347,2566387467,2565540604,2599842771,2669644269,2619954303,3086919933
+      - TMOD_ENABLEDMODS=2824688072,2824688266,2859639393,2995193002,2839001756,2826052599,2858296368,2828041071,2797518634,2828997816,2707400823,2563309347,2566387467,2565540604,2599842771,2669644269,2619954303,3086919933
+      - TMOD_MOTD=Welcome to my tModLoader Server!
+      - TMOD_PASS=secret
+      - TMOD_MAXPLAYERS=8
+      - TMOD_WORLDNAME=Earth
+      - TMOD_WORLDSIZE=2
+      - TMOD_WORLDSEED=not the bees
+      - TMOD_DIFFICULTY=2
