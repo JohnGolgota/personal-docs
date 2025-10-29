@@ -8,7 +8,7 @@ services:
     ports:
       - 7785:7777
     volumes:
-      - ./temp:/data:Z
+      - ./data:/data:Z
     environment:
       - TMOD_SHUTDOWN_MESSAGE=Goodbye!
       - TMOD_AUTOSAVE_INTERVAL=15
@@ -17,7 +17,6 @@ services:
       - TMOD_MOTD=Welcome to my tModLoader Server!
       - TMOD_PASS=secret
       - TMOD_MAXPLAYERS=8
-      - TMOD_WORLDNAME=Earth
+      - TMOD_WORLDNAME=skillIssue
       - TMOD_WORLDSIZE=2
-      - TMOD_WORLDSEED=not the bees
       - TMOD_DIFFICULTY=2
