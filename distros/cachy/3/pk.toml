@@ -1,0 +1,71 @@
+todo = [
+"jetbrains_toolbox",
+"lapce",
+
+# jetbrains_toolbox
+"fleet",
+"webstorm",
+"intellij",
+"android studio",
+"pycharm",
+
+# sh
+"brew",
+# brew
+"sevenzip",
+]
+flatpak = [
+"barrier",
+]
+[bob-nvim]
+corepack = "enable"
+node = "latest"
+[rust]
+cargo = [
+"fnm",
+"bob-nvim",
+"xcp",
+]
+[pacman]
+pacman = [
+"starship",
+]
+cachyos = [
+"dua-cli",
+"zellij",
+"nushell",
+"cloudflared",
+"cloudflare-warp",
+"brave-bin",
+"gaming-pk",
+"resvg",
+"wezterm",
+"chezmoi",
+"yazi",
+"remmina",
+"tmux",
+"flatpak",
+"gitui",
+"podman",
+"docker-compose",
+"jq",
+"xclip",
+]
+[bins]
+pwsh = "installed"
+tar = [
+"vscode",
+"vscodium",
+]
+[repositories]
+personal = [
+"docs",
+"dotfiles"
+]
+[warp-cli]
+wiki = """
+sudo systemctl start warp-svc
+sudo systemctl enable warp-svc
+warp-cli registration new
+warp-cli connect
+"""
