@@ -51,6 +51,12 @@ cachyos = [
 "jq",
 "xclip",
 ]
+fonts = """
+download
+in $XDG_DATA_HOME/fonts
+then
+fc-cache -f -v
+"""
 [bins]
 pwsh = "installed"
 tar = [
