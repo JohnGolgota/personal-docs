@@ -16,6 +16,7 @@ todo = [
 ]
 flatpak = [
 "barrier",
+"modrinth",
 ]
 [bob-nvim]
 corepack = "enable"
@@ -31,6 +32,7 @@ pacman = [
 "starship",
 ]
 cachyos = [
+"jdk21-openjdk",
 "dua-cli",
 "zellij",
 "nushell",
