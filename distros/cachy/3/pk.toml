@@ -30,8 +30,10 @@ cargo = [
 [pacman]
 pacman = [
 "starship",
+"discord",
 ]
 cachyos = [
+"retroarch",
 "jdk21-openjdk",
 "dua-cli",
 "zellij",

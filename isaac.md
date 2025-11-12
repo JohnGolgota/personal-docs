@@ -1,6 +1,6 @@
 69,platinum god
 84,real platinum god
-148,the d4,blow up 30 slot machine
+- 148,the d4,blow up 30 slot machine
 258,blinding baby,use blank card while holding the sun
 - 321,once more with feeling,complete a victory lap
 325,dedication,31 daily challenges
